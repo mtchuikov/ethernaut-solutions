@@ -1,15 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-
 contract King {
-
     address king;
-    uint public prize;
+    uint256 public prize;
     address public owner;
 
     constructor() payable {
-        owner = msg.sender;  
+        owner = msg.sender;
         king = msg.sender;
         prize = msg.value;
     }
@@ -24,4 +22,4 @@ contract King {
     function _king() public view returns (address) {
         return king;
     }
-} 
+}

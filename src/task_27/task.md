@@ -1,9 +1,7 @@
-Some contracts will simply not take your money ¯\_(ツ)_/¯
+This instance represents a Good Samaritan that is wealthy and ready to donate some coins to anyone requesting it.
 
-The goal of this level is to make the balance of the contract greater than zero.
+Would you be able to drain all the balance from his Wallet?
 
 Things that might help:
 
-Fallback methods
-Sometimes the best way to attack a contract is with another contract.
-See the "?" page above, section "Beyond the console"
+Solidity Custom Errors
