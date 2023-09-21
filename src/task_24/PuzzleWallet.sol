@@ -2,7 +2,6 @@
 pragma solidity ^0.8.0;
 
 import "./UpgradeableProxy.sol";
-import {Test, console} from "forge-std/Test.sol";
 
 contract PuzzleProxy is UpgradeableProxy {
     address public pendingAdmin;
