@@ -41,9 +41,6 @@ contract Task_24 is Test {
         vm.prank(eve);
         puzzleWalletAttack.run{value: 1 ether}();
 
-        console.log("Eve balance", address(eve).balance);
-        console.log("Proxy Balance", address(_IPuzzleProxy).balance);
-
         assertEq(eve, _IPuzzleProxy.admin());
     }
 }
