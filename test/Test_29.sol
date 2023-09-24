@@ -6,7 +6,7 @@ import {Test, console} from "forge-std/Test.sol";
 import "../src/task_29/Switch.sol";
 import "../src/task_29/SwitchAttack.sol";
 
-contract Task_27 is Test {
+contract Task_29 is Test {
     Switch switch_;
     SwitchAttack switchAttack;
 

@@ -6,7 +6,7 @@ import {Test, console} from "forge-std/Test.sol";
 import {Recovery} from "../src/task_17/Recovery.sol";
 import {RecoveryAttack} from "../src/task_17/RecoveryAttack.sol";
 
-contract Task_11 is Test {
+contract Task_17 is Test {
     Recovery recovery;
     RecoveryAttack recoveryAttack;
 
