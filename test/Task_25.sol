@@ -14,7 +14,6 @@ contract Test_22 is Test {
     function setUp() public {
         engine = new Engine();
         motorbike = new Motorbike(address(engine));
-
     }
 
     function test_MotorbikeAttack() public {
